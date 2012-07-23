@@ -1,0 +1,89 @@
+#!/bin/bash
+
+#
+# glance-registry       OpenStack Glance Registry reference server implementation
+#
+# chkconfig: 2345 96 04
+# description: OpenStack Glance Registry reference server implementation
+#
+# config: /etc/glance/glance-registry.conf
+# pidfile: /var/run/glance/glance-registry.pid
+
+### BEGIN INIT INFO
+# Required-Start: $local_fs $network $syslog
+# Required-Stop: $local_fs $syslog
+# Should-Start: $syslog
+# Should-Stop: $network $syslog
+# Default-Start: 3 4 5
+# Default-Stop: 0 2 1 6
+# Short-Description: OpenStack Glance Registry reference server implementation
+# Description: The Glance project provides services for discovering,
+#              registering, and retrieving virtual machine images. Glance has a
+#              RESTful API that allows querying of VM image metadata as well as
+#              retrieval of the actual image.
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+prog="OpenStack Glance Registry Server"
+suffix="registry"
+flgfile=/etc/glance/glance-$suffix.conf
+logconf=/etc/glance/logging-$suffix.conf
+pidfile=/var/run/glance/glance-$suffix.pid
+lockfile=/var/lock/subsys/glance-$suffix
+binfile=/usr/bin/glance-$suffix
+daemonuser=glance
+
+start() {
+    echo -n "Starting $prog: "
+    start-stop-daemon --start --oknodo --background --chuid $daemonuser --make-pidfile --pidfile $pidfile --startas $binfile --
+    retval=$?
+    [ $retval -eq 0 ] && success || failure
+    echo
+    [ $retval -eq 0 ] && touch $lockfile
+    return $retval
+}
+
+stop() {
+    echo -n "Stopping $prog: "
+    start-stop-daemon --stop --oknodo --pidfile $pidfile
+    retval=$?
+    [ $retval -eq 0 ] && success || failure
+    echo
+    [ $retval -eq 0 ] && rm -f $lockfile $pidfile
+    return $?
+}
+
+rh_status() {
+    status -p $pidfile $binfile
+}
+
+restart() {
+    stop
+    start
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        rh_status
+        ;;
+    restart)
+        restart
+        ;;
+    condrestart|try-restart)
+        [ -f $lockfile ] && restart
+        ;;
+    *)
+        echo "Usage: service $(basename $0) {start|stop|status|restart|condrestart|try-restart}"
+        exit 1
+        ;;
+esac
+
+exit $?
