@@ -1,3 +1,3 @@
 copy: etc/glance/*
 copy: etc/rc.d/init.d/*
-tar.gz: . name=@name@-@version@
+tar.gz: . name=@prj@-@version@
