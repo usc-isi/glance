@@ -9,7 +9,7 @@
 
 Name:             %{short_name}
 Epoch:            1
-Version:          2012.6
+Version:          2012.1.1
 Release:	  essex
 #Release:	b3118
 Summary:          OpenStack Image Registry and Delivery Service
