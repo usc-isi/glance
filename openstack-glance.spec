@@ -242,7 +242,8 @@ fi
 
 %changelog
 * Mon Jun 25 2012 Karandeep Singh <karan AT isi.edu>
-- Cloned latest code from github on 6/25/12 and created new 2012.6 version
+- got bug-fixed essex code from:
+- https://launchpad.net/glance/essex/2012.1.1/+download/glance-2012.1.1.tar.gz
 * Mon Jun 11 2012 Karandeep Singh <karan AT isi.edu>
 - Updated for essex limited release
 - got rid of os_release in names of packages
