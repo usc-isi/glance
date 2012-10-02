@@ -51,9 +51,19 @@ Requires(postun): initscripts
 Requires(preun):  chkconfig
 Requires(pre):    shadow-utils
 Requires:         python-%{prj} = %{epoch}:%{version}-%{release}
-Requires:         python-kombu >= 1.1.3
 Requires:         start-stop-daemon
-Requires:         python-jsonschema
+
+#MK: needs to be checked
+#Requires:         python-kombu >= 1.1.3
+#Requires:         python-jsonschema
+Requires:         python-jsonschema >= 0.2
+Requires:         python-passlib >= 1.5.3 
+Requires:         python-paste >= 1.7.4 
+Requires:         python-lxml >= 2.2.3
+Requires:         python-swiftclient >= 1.2.0 
+Requires:         python-iso8601 >= 0.1.4 
+Requires:         python-kombu >= 2.0.0 
+Requires:         python-httplib2 >= 0.4.0 
 
 
 Conflicts: %{short_name} =< 2011.3.2
@@ -71,23 +81,37 @@ Summary:          Glance Python libraries
 Group:            Applications/System
 
 Requires:         python-setuptools
-Requires:         python-anyjson
-Requires:         python-argparse
+#Requires:         python-anyjson
+#Requires:         python-argparse
 Requires:         python-boto >= 1.9b
 Requires:         python-daemon = 1.5.5
-Requires:         python-eventlet >= 0.9.12
+#Requires:         python-eventlet >= 0.9.12
 Requires:         python-gflags >= 1.3
 Requires:         python-greenlet >= 0.3.1
 Requires:         python-lockfile >= 0.8
 Requires:         python-mox >= 0.5.0
 Requires:         python-paste-deploy >= 1.5.0
-Requires:         python-routes
-Requires:         python-sqlalchemy >= 0.6.3
+#Requires:         python-routes
+#Requires:         python-sqlalchemy >= 0.6.3
 Requires:         python-webob >= 1.0.8
 Requires:         pyxattr >= 0.6.0
 Requires:         python-pycrypto
-Requires:         python-sqlalchemy-migrate
+#Requires:         python-sqlalchemy-migrate
 Requires:         python-crypto
+
+#MK: needs to be checked
+Requires:         python-devel
+Requires:         python-sqlalchemy-migrate >= 0.7.2
+Requires:         python-argparse >= 1.2.1
+Requires:         python-routes >= 1.12.3
+Requires:         python-eventlet >= 0.9.17.dev
+Requires:         python-anyjson >= 0.3.1
+Requires:         python-sqlalchemy >= 0.7.4
+Requires:         python-simplejson >= 2.0.9 
+Requires:         python-amqplib >= 1.0.2 
+Requires:         python-distribute >= 0.6.10 
+Requires:         python-tempita >= 0.4 
+Requires:         python-decorator >= 3.0.1
 
 %description -n   python-%{prj}
 The Glance project provides services for discovering, registering, and
