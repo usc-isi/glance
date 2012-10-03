@@ -87,7 +87,7 @@ Requires:         python-setuptools
 #Requires:         python-argparse
 Requires:         python-boto >= 1.9b
 Requires:         python-daemon = 1.5.5
-#Requires:         python-eventlet >= 0.9.12
+Requires:         python-eventlet >= 0.9.12
 Requires:         python-gflags >= 1.3
 Requires:         python-greenlet >= 0.3.1
 Requires:         python-lockfile >= 0.8
@@ -106,7 +106,7 @@ Requires:         python-devel
 #Requires:         python-sqlalchemy-migrate >= 0.7.2
 Requires:         python-argparse >= 1.2.1
 Requires:         python-routes >= 1.12.3
-Requires:         python-eventlet >= 0.9.17.dev
+#Requires:         python-eventlet >= 0.9.17.dev
 Requires:         python-anyjson >= 0.3.1
 Requires:         python-sqlalchemy >= 0.7.4
 Requires:         python-simplejson >= 2.0.9 
