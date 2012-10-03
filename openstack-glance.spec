@@ -59,8 +59,10 @@ Requires:         start-stop-daemon
 Requires:         python-jsonschema >= 0.2
 Requires:         python-passlib >= 1.5.3 
 Requires:         python-paste >= 1.7.4 
-Requires:         python-lxml >= 2.2.3
-Requires:         python-swiftclient >= 1.2.0 
+#Requires:         python-lxml >= 2.2.3
+Requires:         python-lxml
+#Requires:         python-swiftclient >= 1.2.0 
+Requires:         python-swiftclient 
 Requires:         python-iso8601 >= 0.1.4 
 Requires:         python-kombu >= 2.0.0 
 Requires:         python-httplib2 >= 0.4.0 
@@ -96,12 +98,12 @@ Requires:         python-paste-deploy >= 1.5.0
 Requires:         python-webob >= 1.0.8
 Requires:         pyxattr >= 0.6.0
 Requires:         python-pycrypto
-#Requires:         python-sqlalchemy-migrate
+Requires:         python-sqlalchemy-migrate
 Requires:         python-crypto
 
 #MK: needs to be checked
 Requires:         python-devel
-Requires:         python-sqlalchemy-migrate >= 0.7.2
+#Requires:         python-sqlalchemy-migrate >= 0.7.2
 Requires:         python-argparse >= 1.2.1
 Requires:         python-routes >= 1.12.3
 Requires:         python-eventlet >= 0.9.17.dev
