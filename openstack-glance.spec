@@ -62,7 +62,7 @@ Requires:         python-paste >= 1.7.4
 #Requires:         python-lxml >= 2.2.3
 Requires:         python-lxml
 #Requires:         python-swiftclient >= 1.2.0 
-Requires:         python-swiftclient 
+#Requires:         python-swiftclient 
 Requires:         python-iso8601 >= 0.1.4 
 Requires:         python-kombu >= 2.0.0 
 Requires:         python-httplib2 >= 0.4.0 
