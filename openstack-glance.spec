@@ -100,11 +100,12 @@ Requires:         python-paste-deploy >= 1.5.0
 Requires:         python-webob >= 1.0.8
 Requires:         pyxattr >= 0.6.0
 Requires:         python-pycrypto
-Requires:         python-sqlalchemy-migrate
+#Requires:         python-sqlalchemy-migrate
 Requires:         python-crypto
 
 #MK: needs to be checked
 Requires:         python-devel
+Requires:         python-sqlalchemy-migrate >= 0.7.1
 #Requires:         python-sqlalchemy-migrate >= 0.7.2
 Requires:         python-argparse >= 1.2.1
 Requires:         python-routes >= 1.12.3
