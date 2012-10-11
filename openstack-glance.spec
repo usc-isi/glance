@@ -184,14 +184,14 @@ install -d -m 755 %{buildroot}%{_sharedstatedir}/%{prj}/images
 install -p -D -m 644 %{SOURCE3}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE3}"`
 install -p -D -m 644 %{SOURCE4}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE4}"`    
 install -p -D -m 644 %{SOURCE5}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE5}"` 
-install -p -D -m 644 %{SOURCE6}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE6}"` 
+install -p -D -m 644 etc/%{SOURCE6}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE6}"` 
 install -p -D -m 644 %{SOURCE7}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE7}"` 
 install -p -D -m 644 %{SOURCE8}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE8}"` 
 install -p -D -m 644 %{SOURCE9}    %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE9}"` 
 install -p -D -m 644 %{SOURCE10}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE10}"`
 install -p -D -m 644 %{SOURCE11}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE11}"`
 install -p -D -m 644 %{SOURCE12}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE12}"`
-install -p -D -m 644 %{SOURCE13}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE13}"`
+install -p -D -m 644 etc/%{SOURCE13}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE13}"`
 install -p -D -m 644 %{SOURCE14}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE14}"`
 install -p -D -m 644 %{SOURCE15}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE15}"`
 install -p -D -m 644 %{SOURCE16}   %{buildroot}%{_sysconfdir}/%{prj}/`basename "%{SOURCE16}"`
