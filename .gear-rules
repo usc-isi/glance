@@ -1,3 +1,4 @@
-copy: etc/glance/*
+#copy: etc/glance/*
+copy: etc/*
 copy: etc/rc.d/init.d/*
 tar.gz: . name=glance-@version@
