@@ -30,6 +30,7 @@ prog="OpenStack Glance Registry Server"
 suffix="registry"
 flgfile=/etc/glance/glance-$suffix.conf
 logconf=/etc/glance/logging-$suffix.conf
+logfile=/var/log/glance/$suffix.log
 pidfile=/var/run/glance/glance-$suffix.pid
 lockfile=/var/lock/subsys/glance-$suffix
 binfile=/usr/bin/glance-$suffix
@@ -37,7 +38,8 @@ daemonuser=glance
 
 start() {
     echo -n "Starting $prog: "
-    start-stop-daemon --start --oknodo --background --chuid $daemonuser --make-pidfile --pidfile $pidfile --startas $binfile --
+    #start-stop-daemon --start --oknodo --background --chuid $daemonuser --make-pidfile --pidfile $pidfile --startas $binfile --
+    HOME=/var/lib/glance /sbin/start-stop-daemon --start -b -c glance --make-pidfile --pidfile $pidfile --exec $binfile -- --logfile=$logfile
     retval=$?
     [ $retval -eq 0 ] && success || failure
     echo
